@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>ابحث عن الحرفيين - الأسطى</title>
+        <meta name="description" content="ابحث عن الحرفيين المحترفين في منصة الأسطى حسب التخصص، المدينة، التقييم، والسعر.">
+        <meta name="keywords" content="ابحث عن حرفي, الأسطى, نجار, سباك, كهربائي, السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- البيانات الهيكلية (Schema Markup) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "الحرفيين في الأسطى",
+            "description": "قائمة الحرفيين المتاحين في منصة الأسطى بناءً على معايير البحث.",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Person",
+                        "name": "أحمد محمد",
+                        "jobTitle": "نجار",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "الرياض",
+                            "addressCountry": "SA"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "50",
+                            "priceCurrency": "SAR"
+                        }
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Person",
+                        "name": "خالد عبدالله",
+                        "jobTitle": "سباك",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "جدة",
+                            "addressCountry": "SA"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "45",
+                            "priceCurrency": "SAR"
+                        }
+                    }
+                }
+            ]
+        }
+        </script>
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/craftsmen-search.css">
+    </head>
+    <body>
+        <!-- زر التواصل العائم -->
+        <div class="floating-action-btn">
+            <a href="#" class="contact-btn"><i class="fas fa-comments"></i></a>
+        </div>
+
+        <!-- الهيدر -->
+        <div class="app-bar">
+            <div class="app-header container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="الأسطى">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">الخدمات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">نجارة</a>
+                            <a href="#">سباكة</a>
+                            <a href="#">كهرباء</a>
+                            <a href="#">بناء</a>
+                            <a href="#">دهانات</a>
+                        </div>
+                    </div>
+                    <a href="blog.html">مدونتنا</a>
+                    <a href="specialties.html">التخصصات</a>
+                    <a href="signup-professional.html">انضم كحرفي</a>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html">تسجيل الدخول</a>
+                    <a href="signup-client.html">تسجيل جديد كعميل</a>
+                    <a href="signup-professional.html">تسجيل جديد كمهني</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم البحث عن الحرفيين -->
+        <section class="craftsmen-search-section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <div class="title-content">
+                        <h1>ابحث عن الحرفيين</h1>
+                        <p>اعثر على الحرفي المثالي لاحتياجاتك بسهولة وسرعة | <a href="specialties.html" class="back-link">العودة إلى التخصصات</a></p>
+                    </div>
+                </div>
+                <div class="craftsmen-search">
+                    <div class="search-box">
+                        <div class="search-field">
+                            <i class="fas fa-briefcase"></i>
+                            <select id="specialty-filter">
+                                <option value="">اختر التخصص</option>
+                                <option value="نجارة">نجارة</option>
+                                <option value="سباكة">سباكة</option>
+                                <option value="كهرباء">كهرباء</option>
+                                <option value="بناء">بناء</option>
+                                <option value="نقاشة">نقاشة</option>
+                                <option value="حدادة">حدادة</option>
+                                <option value="تكييف">تكييف</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <select id="city-filter">
+                                <option value="">اختر المدينة</option>
+                                <option value="الرياض">الرياض</option>
+                                <option value="جدة">جدة</option>
+                                <option value="الدمام">الدمام</option>
+                                <option value="مكة">مكة</option>
+                                <option value="المدينة">المدينة</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <i class="fas fa-star"></i>
+                            <select id="rating-filter">
+                                <option value="">التقييم</option>
+                                <option value="4+">4 نجوم وأعلى</option>
+                                <option value="3+">3 نجوم وأعلى</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <select id="price-filter">
+                                <option value="">السعر للساعة</option>
+                                <option value="30-50">30-50 ريال</option>
+                                <option value="50-100">50-100 ريال</option>
+                                <option value="100+">100+ ريال</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <i class="fas fa-clock"></i>
+                            <select id="experience-filter">
+                                <option value="">سنوات الخبرة</option>
+                                <option value="0-2">0-2 سنوات</option>
+                                <option value="3-5">3-5 سنوات</option>
+                                <option value="5+">5+ سنوات</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        <button id="reset-filters" class="btn btn-outline-secondary">إعادة تعيين</button>
+                    </div>
+                    <div class="sort-options">
+                        <label for="sort-by">فرز حسب:</label>
+                        <select id="sort-by">
+                            <option value="rating-desc">الأعلى تقييمًا</option>
+                            <option value="price-asc">الأقل سعرًا</option>
+                            <option value="price-desc">الأعلى سعرًا</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="craftsmen-grid" id="craftsmenGrid">
+                    <div class="craftsman-card" data-specialty="نجارة" data-city="الرياض" data-rating="4.5" data-price="50" data-experience="6">
+                        <div class="craftsman-icon"><i class="fas fa-hammer"></i></div>
+                        <div class="availability available">متاح</div>
+                        <img src="assets/images/craftsman1.jpg" alt="أحمد محمد">
+                        <div class="craftsman-content">
+                            <h3>أحمد محمد</h3>
+                            <p class="specialty">نجار - الرياض</p>
+                            <div class="craftsman-meta">
+                                <div class="rating" data-rating="4.5">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(120 تقييم)</span>
+                                </div>
+                                <div class="price" data-price="50">50 ريال/ساعة</div>
+                            </div>
+                            <a href="craftsman-profile.html" class="btn btn-secondary">عرض الملف الشخصي</a>
+                        </div>
+                    </div>
+                    <div class="craftsman-card" data-specialty="سباكة" data-city="جدة" data-rating="4.0" data-price="45" data-experience="4">
+                        <div class="craftsman-icon"><i class="fas fa-wrench"></i></div>
+                        <div class="availability busy">مشغول</div>
+                        <img src="assets/images/craftsman2.jpg" alt="خالد عبدالله">
+                        <div class="craftsman-content">
+                            <h3>خالد عبدالله</h3>
+                            <p class="specialty">سباك - جدة</p>
+                            <div class="craftsman-meta">
+                                <div class="rating" data-rating="4.0">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(85 تقييم)</span>
+                                </div>
+                                <div class="price" data-price="45">45 ريال/ساعة</div>
+                            </div>
+                            <a href="craftsman-profile.html" class="btn btn-secondary">عرض الملف الشخصي</a>
+                        </div>
+                    </div>
+                    <div class="craftsman-card" data-specialty="كهرباء" data-city="الرياض" data-rating="5.0" data-price="60" data-experience="8">
+                        <div class="craftsman-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="availability available">متاح</div>
+                        <img src="assets/images/craftsman3.jpg" alt="محمد علي">
+                        <div class="craftsman-content">
+                            <h3>محمد علي</h3>
+                            <p class="specialty">كهربائي - الرياض</p>
+                            <div class="craftsman-meta">
+                                <div class="rating" data-rating="5.0">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(150 تقييم)</span>
+                                </div>
+                                <div class="price" data-price="60">60 ريال/ساعة</div>
+                            </div>
+                            <a href="craftsman-profile.html" class="btn btn-secondary">عرض الملف الشخصي</a>
+                        </div>
+                    </div>
+                    <div class="craftsman-card" data-specialty="بناء" data-city="الدمام" data-rating="4.0" data-price="70" data-experience="5">
+                        <div class="craftsman-icon"><i class="fas fa-trowel"></i></div>
+                        <div class="availability busy">مشغول</div>
+                        <img src="assets/images/craftsman4.jpg" alt="عبدالرحمن سعيد">
+                        <div class="craftsman-content">
+                            <h3>عبدالرحمن سعيد</h3>
+                            <p class="specialty">بناء - الدمام</p>
+                            <div class="craftsman-meta">
+                                <div class="rating" data-rating="4.0">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(90 تقييم)</span>
+                                </div>
+                                <div class="price" data-price="70">70 ريال/ساعة</div>
+                            </div>
+                            <a href="craftsman-profile.html" class="btn btn-secondary">عرض الملف الشخصي</a>
+                        </div>
+                    </div>
+                    <div class="craftsman-card" data-specialty="نقاشة" data-city="مكة" data-rating="4.2" data-price="55" data-experience="3">
+                        <div class="craftsman-icon"><i class="fas fa-paint-roller"></i></div>
+                        <div class="availability available">متاح</div>
+                        <img src="assets/images/craftsman5.jpg" alt="سامي عبدالعزيز">
+                        <div class="craftsman-content">
+                            <h3>سامي عبدالعزيز</h3>
+                            <p class="specialty">نقاش - مكة</p>
+                            <div class="craftsman-meta">
+                                <div class="rating" data-rating="4.2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(110 تقييم)</span>
+                                </div>
+                                <div class="price" data-price="55">55 ريال/ساعة</div>
+                            </div>
+                            <a href="craftsman-profile.html" class="btn btn-secondary">عرض الملف الشخصي</a>
+                        </div>
+                    </div>
+                    <div class="craftsman-card" data-specialty="حدادة" data-city="المدينة" data-rating="4.8" data-price="65" data-experience="7">
+                        <div class="craftsman-icon"><i class="fas fa-tools"></i></div>
+                        <div class="availability available">متاح</div>
+                        <img src="assets/images/craftsman6.jpg" alt="يوسف خالد">
+                        <div class="craftsman-content">
+                            <h3>يوسف خالد</h3>
+                            <p class="specialty">حداد - المدينة</p>
+                            <div class="craftsman-meta">
+                                <div class="rating" data-rating="4.8">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(130 تقييم)</span>
+                                </div>
+                                <div class="price" data-price="65">65 ريال/ساعة</div>
+                            </div>
+                            <a href="craftsman-profile.html" class="btn btn-secondary">عرض الملف الشخصي</a>
+                        </div>
+                    </div>
+                    <div class="craftsman-card hidden" data-specialty="تكييف" data-city="الرياض" data-rating="4.3" data-price="80" data-experience="5">
+                        <div class="craftsman-icon"><i class="fas fa-snowflake"></i></div>
+                        <div class="availability busy">مشغول</div>
+                        <img src="assets/images/craftsman7.jpg" alt="عبدالله فهد">
+                        <div class="craftsman-content">
+                            <h3>عبدالله فهد</h3>
+                            <p class="specialty">فني تكييف - الرياض</p>
+                            <div class="craftsman-meta">
+                                <div class="rating" data-rating="4.3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(95 تقييم)</span>
+                                </div>
+                                <div class="price" data-price="80">80 ريال/ساعة</div>
+                            </div>
+                            <a href="craftsman-profile.html" class="btn btn-secondary">عرض الملف الشخصي</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="no-results" class="text-center mt-4" style="display: none;">
+                    <p>لا توجد نتائج تطابق معايير البحث. حاول تغيير الفلاتر.</p>
+                </div>
+                <div class="text-center mt-4">
+                    <button id="loadMoreCraftsmen" class="btn btn-secondary">تحميل المزيد</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- التذييل -->
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="الأسطى">
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#">عن التطبيق</a>
+                        <a href="#">الشروط والأحكام</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">اتصل بنا</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#">كيفية التسجيل</a>
+                        <a href="#">نصائح للحرفيين</a>
+                        <a href="#">سياسة العمولة</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/components.js"></script>
+        <script src="assets/js/craftsmen-search.js"></script>
+    </body>
+</html>

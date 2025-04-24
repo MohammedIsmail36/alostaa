@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>قائمة المدونات - الأسطى</title>
+        <meta name="description" content="صفحة قائمة المدونات للإداري في منصة الأسطى.">
+        <meta name="keywords" content="قائمة مدونات, الأسطى, إداري, السعودية">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- مكتبة Lazysizes لدعم Lazy Loading -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+        <!-- مكتبة Toastify للإشعارات -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/admin-blog-list.css">
+    </head>
+    <body>
+        <!-- الهيدر -->
+        <div class="app-bar">
+            <div class="app-header container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="الأسطى">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="blog.html">مدونتنا</a>
+                    <a href="specialties.html">التخصصات</a>
+                </div>
+                <div class="user-actions">
+                    <a href="admin-dashboard.html">لوحة التحكم</a>
+                    <a href="admin-blog-list.html">إدارة المدونات</a>
+                    <a href="logout.html">تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم قائمة المدونات -->
+        <section class="admin-blog-list-section">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>قائمة المدونات</h1>
+                    <a href="admin-add-blog.html" class="btn btn-primary"><i class="fas fa-plus"></i> إضافة مدونة جديدة</a>
+                </div>
+                <p>إدارة جميع المدونات الموجودة في المنصة.</p>
+
+                <!-- أدوات البحث والتصفية -->
+                <div class="blog-controls mb-4">
+                    <input type="text" class="form-control" id="searchBlogs" placeholder="ابحث عن مدونة...">
+                    <select class="form-control" id="filterStatus">
+                        <option value="">جميع الحالات</option>
+                        <option value="منشور">منشور</option>
+                        <option value="مسودة">مسودة</option>
+                        <option value="مخفي">مخفي</option>
+                    </select>
+                    <select class="form-control" id="filterTags">
+                        <option value="">جميع العلامات</option>
+                        <option value="أثاث">أثاث</option>
+                        <option value="تصميم داخلي">تصميم داخلي</option>
+                        <option value="نصائح">نصائح</option>
+                    </select>
+                </div>
+
+                <!-- شبكة المدونات -->
+                <div class="row" id="blogGrid">
+                    <!-- سيتم تحميل المدونات ديناميكيًا -->
+                </div>
+
+                <!-- مؤشر التحميل -->
+                <div id="loadingSpinner" class="text-center my-4" style="display: none;">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جارٍ التحميل...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- زر العودة إلى الأعلى -->
+        <button id="backToTop" class="btn btn-primary back-to-top" aria-label="العودة إلى الأعلى">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- Modal لتعليق المدونة -->
+        <div class="modal fade" id="suspendModal" tabindex="-1" aria-labelledby="suspendModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="suspendModalLabel">تعليق المدونة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="suspendBlogId">
+                        <p>اختر مدة تعليق المدونة من الواجهة الأمامية:</p>
+                        <div class="mb-3">
+                            <label for="suspendDuration" class="form-label">مدة التعليق</label>
+                            <select class="form-control" id="suspendDuration">
+                                <option value="7">7 أيام</option>
+                                <option value="30">30 يومًا</option>
+                                <option value="90">90 يومًا</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-primary" onclick="suspendBlog()">تأكيد التعليق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- التذييل -->
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="الأسطى">
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#">عن التطبيق</a>
+                        <a href="#">الشروط والأحكام</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">اتصل بنا</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#">كيفية التسجيل</a>
+                        <a href="#">نصائح للحرفيين</a>
+                        <a href="#">سياسة العمولة</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/components.js"></script>
+        <script src="assets/js/admin-blog-list.js"></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+/* assets/css/worker.css */
+
+.featured-workers {
+    background-color: var(--light-bg);
+}
+
+.worker-image {
+    height: 220px;
+}
+
+.worker-rating {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.worker-rating i {
+    margin-left: 0.25rem;
+}
+
+.worker-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.worker-specialty {
+    color: var(--craftsman);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.worker-meta {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.worker-price {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .worker-image {
+        height: 180px;
+    }
+
+    .worker-info h3 {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,620 @@
+/* assets/css/shared.css */
+
+/* إعدادات الألوان (هوية الموقع) */
+:root {
+    --primary: #1E3A8A; /* أزرق داكن للثقة والاحترافية */
+    --secondary: #F59E0B; /* برتقالي ذهبي دافئ لجذب الانتباه */
+    --accent: #2D3748; /* رمادي داكن للتأكيد */
+    --light-bg: #F9FAFB; /* خلفية فاتحة للغاية */
+    --text: #1F2937; /* نص داكن للوضوح */
+    --light-text: #6B7280; /* نص ثانوي رمادي */
+    --success: #10B981; /* أخضر ناعم للإشعارات */
+    --white: #FFFFFF; /* أبيض نقي */
+    --gradient: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%); /* تدرج للخلفيات */
+    --light-blue: #60A5FA; /* أزرق فاتح للطلبات المخصصة */
+    --craftsman: #F97316; /* برتقالي دافئ للحرفيين */
+    --border-radius: 0.75rem;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* إعادة تعيين الأنماط */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* إزالة الخط السفلي من جميع الروابط */
+a {
+    text-decoration: none !important; /* إزالة الخط السفلي */
+}
+
+a:hover {
+    text-decoration: none !important; /* التأكد من إزالة الخط السفلي عند الـ hover */
+}
+
+/* إعدادات عامة للموقع */
+body {
+    background-color: var(--light-bg);
+    color: var(--text);
+    line-height: 1.6;
+    direction: rtl;
+}
+
+/* تخصيص Bootstrap */
+:root {
+    --bs-primary: var(--primary);
+    --bs-primary-rgb: 30, 58, 138;
+    --bs-secondary: var(--secondary);
+    --bs-secondary-rgb: 245, 158, 11;
+    --bs-font-sans-serif: 'Tajawal', sans-serif;
+    --bs-body-bg: var(--light-bg);
+    --bs-body-color: var(--text);
+    --bs-link-color: var(--primary);
+    --bs-link-hover-color: var(--secondary);
+    --bs-border-radius: var(--border-radius);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: #f59e0b;
+    --bs-btn-hover-border-color: #f59e0b;
+    --bs-btn-active-bg: var(--primary);
+    --bs-btn-active-border-color: var(--primary);
+}
+
+.btn-secondary {
+    --bs-btn-bg: var(--secondary);
+    --bs-btn-border-color: var(--secondary);
+    --bs-btn-hover-bg: var(--primary);
+    --bs-btn-hover-border-color: var(--primary);
+    --bs-btn-active-bg: var(--secondary);
+    --bs-btn-active-border-color: var(--secondary);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: var(--primary);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-border-color: var(--primary);
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: var(--secondary);
+    --bs-btn-border-color: var(--secondary);
+    --bs-btn-hover-bg: var(--secondary);
+    --bs-btn-hover-color: var(--white);
+    --bs-btn-hover-border-color: var(--secondary);
+}
+
+.form-select,
+.form-control {
+    border-radius: var(--border-radius);
+}
+
+.card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.card:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* assets/css/shared.css */
+
+/* تنسيقات النوافذ المنبثقة */
+.modal-content {
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-family: 'Tajawal', sans-serif;
+    animation: modalFadeIn 0.3s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-header {
+    background-color: var(--primary);
+    color: var(--white);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.modal-header .modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.modal-header .btn-close {
+    background: none;
+    color: var(--white);
+    opacity: 0.8;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.modal-header .btn-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 2rem;
+    color: var(--text);
+}
+
+.modal-body p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.modal-body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-body ul li strong {
+    color: var(--text);
+}
+
+.modal-body .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.modal-body .form-group label {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.modal-body .form-group input,
+.modal-body .form-group select,
+.modal-body .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+    background-color: #F9FAFB;
+    transition: border-color 0.3s ease;
+}
+
+.modal-body .form-group input:focus,
+.modal-body .form-group select:focus,
+.modal-body .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+}
+
+.modal-body .form-group textarea {
+    resize: vertical;
+}
+
+.modal-footer {
+    padding: 1rem 2rem;
+    border-top: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.modal-footer .btn {
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-footer .btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.modal-footer .btn-secondary {
+    background-color: #E5E7EB;
+    color: var(--text);
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #D1D5DB;
+    transform: scale(1.05);
+}
+
+.modal-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.modal-icon i {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 1rem;
+    }
+
+    .modal-header {
+        padding: 1rem;
+    }
+
+    .modal-header .modal-title {
+        font-size: 1.3rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .modal-body p {
+        font-size: 0.95rem;
+    }
+
+    .modal-body ul li {
+        font-size: 0.95rem;
+    }
+
+    .modal-footer {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .modal-footer .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+
+
+/* assets/css/shared.css */
+
+/* تنسيقات نافذة الدردشة المنبثقة */
+.chat-details {
+    background-color: #F9FAFB;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.chat-details p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.chat-details p strong {
+    color: var(--text);
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.message {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.message.received {
+    align-items: flex-start;
+}
+
+.message.sent {
+    align-items: flex-end;
+}
+
+.message p {
+    background-color: #F9FAFB;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+    max-width: 70%;
+}
+
+.message.sent p {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.message-time {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    margin-top: 0.3rem;
+}
+
+.chat-input {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+    background-color: #F9FAFB;
+}
+
+.chat-input button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .chat-details p {
+        font-size: 0.95rem;
+    }
+
+    .messages {
+        max-height: 300px;
+    }
+
+    .message p {
+        font-size: 0.95rem;
+        max-width: 85%;
+    }
+
+    .message-time {
+        font-size: 0.8rem;
+    }
+
+    .chat-input {
+        padding: 0.75rem;
+    }
+
+    .chat-input input {
+        font-size: 0.95rem;
+    }
+
+    .chat-input button {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* assets/css/shared.css */
+
+/* تنسيقات العروض المقبولة */
+.accepted-offers,
+.completed-requests,
+.available-requests {
+    margin-bottom: 3rem;
+}
+
+.accepted-offers h2,
+.completed-requests h2,
+.available-requests h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+.offer-card,
+.request-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover,
+.request-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-header,
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.offer-header h3,
+.request-header h3 {
+    font-size: 1.2rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.offer-header h3 i,
+.request-header h3 i {
+    color: var(--primary);
+}
+
+.status {
+    padding: 0.3rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status.accepted {
+    background-color: #D1FAE5;
+    color: #10B981;
+}
+
+.status.completed {
+    background-color: #DBEAFE;
+    color: #3B82F6;
+}
+
+.status.submitted {
+    background-color: #FEF3C7;
+    color: #D97706;
+}
+
+.status.rejected {
+    background-color: #FEE2E2;
+    color: #EF4444;
+}
+
+.status.pending {
+    background-color: #E5E7EB;
+    color: #6B7280;
+}
+
+.offer-body,
+.request-body {
+    padding: 1.5rem;
+}
+
+.offer-body p,
+.request-body p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.offer-body p strong,
+.request-body p strong {
+    color: var(--text);
+}
+
+.offer-actions,
+.request-actions {
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.offer-actions .btn,
+.request-actions .btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .accepted-offers h2,
+    .completed-requests h2,
+    .available-requests h2 {
+        font-size: 1.3rem;
+    }
+
+    .offer-card,
+    .request-card {
+        margin-bottom: 1rem;
+    }
+
+    .offer-header,
+    .request-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .offer-header h3,
+    .request-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .status {
+        font-size: 0.85rem;
+    }
+
+    .offer-body,
+    .request-body {
+        padding: 1rem;
+    }
+
+    .offer-body p,
+    .request-body p {
+        font-size: 0.95rem;
+    }
+
+    .offer-actions,
+    .request-actions {
+        padding: 0 1rem 1rem;
+    }
+
+    .offer-actions .btn,
+    .request-actions .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* assets/css/shared.css */
+
+/* زر العودة إلى الأعلى */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    opacity: 0.8;
+}
+
+.back-to-top i {
+    font-size: 1.5rem;
+}

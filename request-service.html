@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>طلب خدمة - الأسطى</title>
+        <meta name="description" content="اطلب خدمة من حرفي محترف بسهولة عبر منصة الأسطى. وصف الخدمة، حدد المدة، واستقبل عروض الحرفيين.">
+        <meta name="keywords" content="طلب خدمة, تأجير حرفي, الأسطى, خدمات منزلية, السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/request-service.css">
+    </head>
+    <body>
+        <!-- زر التواصل العائم -->
+        <div class="floating-action-btn">
+            <a href="#" class="contact-btn"><i class="fas fa-comments"></i></a>
+        </div>
+
+        <!-- الهيدر -->
+        <div class="app-bar">
+            <div class="app-header container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="الأسطى">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">الخدمات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">نجارة</a>
+                            <a href="#">سباكة</a>
+                            <a href="#">كهرباء</a>
+                            <a href="#">بناء</a>
+                            <a href="#">دهانات</a>
+                        </div>
+                    </div>
+                    <a href="blog.html">مدونتنا</a>
+                    <a href="specialties.html">التخصصات</a>
+                    <a href="signup-professional.html">انضم كحرفي</a>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html">تسجيل الدخول</a>
+                    <a href="signup-client.html">تسجيل جديد كعميل</a>
+                    <a href="signup-professional.html">تسجيل جديد كمهني</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم طلب الخدمة -->
+        <section class="request-service-section">
+            <div class="container">
+                <!-- شريط التنقل العلوي (Breadcrumb) -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                        <li class="breadcrumb-item"><a href="specialties.html">التخصصات</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">طلب خدمة</li>
+                    </ol>
+                </nav>
+
+                <div class="request-service-form">
+                    <h1>طلب خدمة</h1>
+                    <p>املأ النموذج التالي لإرسال طلبك، وسنقوم بتوصيلك بالحرفي المناسب بناءً على العروض المقدمة.</p>
+                    <div class="platform-warning">
+                        <i class="fas fa-info-circle"></i>
+                        <span>لضمان سلامتك، يرجى إتمام جميع المدفوعات والتواصل عبر المنصة فقط.</span>
+                    </div>
+                    <form id="serviceRequestForm">
+                        <!-- اختيار التخصص -->
+                        <div class="form-group">
+                            <label for="specialty">التخصص</label>
+                            <select id="specialty" name="specialty" required>
+                                <option value="" disabled selected>اختر التخصص</option>
+                                <option value="نجارة">نجارة</option>
+                                <option value="سباكة">سباكة</option>
+                                <option value="كهرباء">كهرباء</option>
+                                <option value="بناء">بناء</option>
+                                <option value="دهانات">دهانات</option>
+                            </select>
+                        </div>
+
+                        <!-- وصف الخدمة -->
+                        <div class="form-group">
+                            <label for="description">وصف الخدمة المطلوبة</label>
+                            <textarea id="description" name="description" rows="4" placeholder="صف الخدمة التي تحتاجها (مثل: إصلاح باب خشبي، تصميم خزانة)" required></textarea>
+                        </div>
+
+                        <!-- المدة المحددة -->
+                        <div class="form-group">
+                            <label for="duration">المدة المحددة لإتمام الخدمة</label>
+                            <select id="duration" name="duration" required>
+                                <option value="" disabled selected>اختر المدة</option>
+                                <option value="1-day">يوم واحد</option>
+                                <option value="2-days">يومان</option>
+                                <option value="3-days">3 أيام</option>
+                                <option value="1-week">أسبوع</option>
+                                <option value="custom">مدة مخصصة</option>
+                            </select>
+                        </div>
+
+                        <!-- السعر المتوقع -->
+                        <div class="form-group">
+                            <label for="expectedPrice">السعر المتوقع (اختياري)</label>
+                            <input type="number" id="expectedPrice" name="expectedPrice" placeholder="أدخل السعر المتوقع بالريال السعودي">
+                            <small>إذا لم تحدد سعرًا، سيتم تقديم عروض بناءً على تقدير الحرفيين.</small>
+                        </div>
+
+                        <!-- رفع الصور -->
+                        <div class="form-group">
+                            <label for="images">رفع صور لتوضيح المشكلة (اختياري، بحد أقصى 5 صور)</label>
+                            <input type="file" id="images" name="images" accept="image/*" multiple>
+                            <div id="imagePreview" class="image-preview"></div>
+                        </div>
+
+                        <!-- اختيار المدينة والحي -->
+                        <div class="form-group">
+                            <label for="city">المدينة</label>
+                            <select id="city" name="city" required>
+                                <option value="" disabled selected>اختر المدينة</option>
+                                <option value="riyadh">الرياض</option>
+                                <option value="jeddah">جدة</option>
+                                <option value="dammam">الدمام</option>
+                                <option value="mecca">مكة المكرمة</option>
+                                <option value="medina">المدينة المنورة</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="district">الحي</label>
+                            <select id="district" name="district" required>
+                                <option value="" disabled selected>اختر الحي</option>
+                                <!-- سيتم ملء هذه القائمة ديناميكيًا بناءً على المدينة -->
+                            </select>
+                        </div>
+
+                        <!-- زر الإرسال -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">إرسال الطلب</button>
+                            <button type="reset" class="btn-secondary">إلغاء</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal لتأكيد رفع الطلب -->
+        <div class="modal fade" id="requestConfirmationModal" tabindex="-1" aria-labelledby="requestConfirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="requestConfirmationModalLabel">تم رفع طلبك بنجاح</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p>شكرًا لطلبك! سيتم استقبال العروض من الحرفيين قريبًا.</p>
+                        <h6>ملخص الطلب:</h6>
+                        <ul>
+                            <li><strong>رقم الطلب:</strong> <span id="requestId"></span></li>
+                            <li><strong>التخصص:</strong> <span id="summarySpecialty"></span></li>
+                            <li><strong>الوصف:</strong> <span id="summaryDescription"></span></li>
+                            <li><strong>المدة المحددة:</strong> <span id="summaryDuration"></span></li>
+                            <li><strong>السعر المتوقع:</strong> <span id="summaryExpectedPrice"></span></li>
+                            <li><strong>الموقع:</strong> <span id="summaryLocation"></span></li>
+                        </ul>
+                        <p>يمكنك متابعة الطلب والعروض من لوحة التحكم الخاصة بك.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="client-dashboard.html" class="btn btn-primary">متابعة الطلب</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- التذييل -->
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="الأسطى">
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#">عن التطبيق</a>
+                        <a href="#">الشروط والأحكام</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">اتصل بنا</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#">كيفية التسجيل</a>
+                        <a href="#">نصائح للحرفيين</a>
+                        <a href="#">سياسة العمولة</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/components.js"></script>
+        <script src="assets/js/request-service.js"></script>
+    </body>
+</html>

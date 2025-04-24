@@ -1,0 +1,249 @@
+/* assets/css/craftsmen-search.css */
+
+/* تنسيقات قسم البحث عن الحرفيين */
+.craftsmen-search-section {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/craftsmen-bg.jpg') no-repeat center center/cover;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.title-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title-content p {
+    font-size: 1.1rem;
+    color: var(--text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title-content .back-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.title-content .back-link:hover {
+    color: var(--secondary);
+}
+
+.craftsmen-search {
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    flex-wrap: wrap;
+}
+
+.search-field {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-field i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: var(--primary);
+}
+
+.search-field select {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+    transition: border-color 0.3s ease;
+}
+
+.search-field select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.2);
+}
+
+.search-box .btn-primary,
+.search-box .btn-outline-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+}
+
+.sort-options {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-options label {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.sort-options select {
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.craftsmen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.craftsman-card {
+    position: relative;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.craftsman-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.craftsman-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.availability {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.availability.available {
+    background-color: #10B981;
+    color: var(--white);
+}
+
+.availability.busy {
+    background-color: #EF4444;
+    color: var(--white);
+}
+
+.craftsman-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.craftsman-content {
+    padding: 1.5rem;
+}
+
+.craftsman-content h3 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.craftsman-content .specialty {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.craftsman-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+.rating span {
+    color: var(--light-text);
+    margin-right: 0.5rem;
+}
+
+.price {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.craftsman-card .btn-secondary {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.craftsman-card.hidden {
+    display: none;
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .craftsmen-search-section {
+        padding: 2rem 0;
+    }
+
+    .title-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .title-content p {
+        font-size: 1rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .search-field {
+        min-width: 100%;
+    }
+
+    .craftsmen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .craftsman-card img {
+        height: 150px;
+    }
+}

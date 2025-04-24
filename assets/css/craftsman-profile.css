@@ -1,0 +1,661 @@
+/* assets/css/craftsman-profile.css */
+
+/* تنسيقات قسم ملف الحرفي */
+.worker-profile-section {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/craftsman-bg.jpg') no-repeat center center/cover;
+}
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-item a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--secondary);
+}
+
+.worker-profile-header {
+    display: grid;
+    grid-template-columns: 150px 1fr auto;
+    gap: 2rem;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.worker-image-container {
+    position: relative;
+}
+
+.worker-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+}
+
+.badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.badge.featured {
+    background-color: #F59E0B;
+    color: var(--white);
+}
+
+.badge.verified {
+    background-color: #10B981;
+    color: var(--white);
+}
+
+.worker-info h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.worker-specialty {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.worker-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--light-text);
+}
+
+.worker-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.worker-meta i {
+    color: var(--secondary);
+}
+
+#availability-icon {
+    color: #10B981; /* أخضر للمتاح */
+    font-size: 0.6rem;
+}
+
+#availability-text {
+    color: #10B981;
+}
+
+.worker-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.worker-btns a,
+.worker-btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.worker-btns .btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.worker-btns .btn-primary:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.worker-btns .btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.worker-btns .btn-secondary:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.favorite-btn.favorited i {
+    color: #EF4444;
+}
+
+/* إخفاء العناصر المخصصة للحرفي فقط عند عرض الصفحة للعملاء */
+.craftsman-only {
+    display: block; /* يمكن تغييره إلى none بناءً على حالة تسجيل الدخول */
+}
+
+/* النبذة والإحصائيات */
+.worker-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.worker-bio,
+.worker-stats {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.worker-bio h2,
+.worker-stats h2,
+.worker-bio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.worker-bio p {
+    font-size: 1rem;
+    color: var(--light-text);
+    line-height: 1.8;
+}
+
+.worker-map {
+    margin-top: 1.5rem;
+}
+
+.worker-stats ul {
+    list-style: none;
+    padding: 0;
+}
+
+.worker-stats li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.worker-stats i {
+    color: var(--primary);
+}
+
+/* معرض الأعمال */
+.worker-portfolio {
+    margin-bottom: 2rem;
+}
+
+.worker-portfolio h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.carousel-item img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+}
+
+.carousel-caption p {
+    margin: 0;
+    color: var(--white);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item p {
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+}
+
+.delete-portfolio-item {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+}
+
+/* التقييمات والتعليقات */
+.worker-ratings-reviews {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.worker-ratings-reviews h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.sort-reviews {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-reviews label {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.sort-reviews select {
+    padding: 0.5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.ratings-reviews-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+/* التعليقات */
+.worker-reviews h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-item {
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 1rem;
+}
+
+.review-item.hidden {
+    display: none;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.reviewer-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-rating {
+    margin-bottom: 0.5rem;
+}
+
+.review-rating i {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+.review-item p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.review-date {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    opacity: 0.7;
+}
+
+/* زر تحميل المزيد */
+#loadMoreReviews {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#loadMoreReviews:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* إحصائيات التقييمات */
+.worker-ratings-stats {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.ratings-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.average-rating {
+    text-align: center;
+}
+
+.rating-stars i {
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.rating-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0.5rem 0;
+}
+
+.average-rating p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+}
+
+.ratings-distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.rating-bar span:first-child {
+    width: 60px;
+}
+
+.progress-bar {
+    flex: 1;
+    background-color: #E5E7EB;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: var(--primary);
+    height: 100%;
+}
+
+.ratings-action {
+    text-align: center;
+}
+
+.ratings-action h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.ratings-action p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.ratings-action .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ratings-action .btn-primary:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .worker-profile-section {
+        padding: 2rem 0;
+    }
+
+    .worker-profile-header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .worker-image img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .worker-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .worker-specialty {
+        font-size: 1rem;
+    }
+
+    .worker-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .worker-btns {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .worker-btns a,
+    .worker-btns button {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .worker-details {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .worker-bio,
+    .worker-stats {
+        padding: 1rem;
+    }
+
+    .worker-bio h2,
+    .worker-stats h2,
+    .worker-bio h3 {
+        font-size: 1.3rem;
+    }
+
+    .worker-bio p {
+        font-size: 0.95rem;
+    }
+
+    .worker-map #map {
+        height: 150px;
+    }
+
+    .worker-stats li {
+        font-size: 0.95rem;
+    }
+
+    .worker-portfolio h2 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-item img {
+        height: 200px;
+    }
+
+    .portfolio-item img {
+        height: 180px;
+    }
+
+    .portfolio-item p {
+        font-size: 0.9rem;
+    }
+
+    .worker-ratings-reviews {
+        padding: 1.5rem;
+    }
+
+    .worker-ratings-reviews h2 {
+        font-size: 1.3rem;
+    }
+
+    .sort-reviews {
+        justify-content: center;
+    }
+
+    .ratings-reviews-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .worker-reviews h3 {
+        font-size: 1.2rem;
+    }
+
+    .review-author {
+        font-size: 0.95rem;
+    }
+
+    .reviewer-img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .review-rating i {
+        font-size: 0.8rem;
+    }
+
+    .review-item p {
+        font-size: 0.9rem;
+    }
+
+    .review-date {
+        font-size: 0.8rem;
+    }
+
+    .worker-ratings-stats {
+        padding: 1rem;
+    }
+
+    .rating-stars i {
+        font-size: 1rem;
+    }
+
+    .rating-value {
+        font-size: 1.3rem;
+    }
+
+    .average-rating p {
+        font-size: 0.9rem;
+    }
+
+    .rating-bar {
+        font-size: 0.85rem;
+    }
+
+    .rating-bar span:first-child {
+        width: 50px;
+    }
+
+    .ratings-action h3 {
+        font-size: 1.1rem;
+    }
+
+    .ratings-action p {
+        font-size: 0.9rem;
+    }
+
+    .ratings-action .btn-primary {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+}

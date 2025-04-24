@@ -1,0 +1,135 @@
+/* assets/css/payment.css */
+
+.payment-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.payment-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.payment-section p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.payment-form {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.payment-form h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.offer-summary {
+    background-color: #F9FAFB;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.offer-summary p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.offer-summary p strong {
+    color: var(--text);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+    background-color: #F9FAFB;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.payment-form button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 25px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-form button:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .payment-section {
+        padding: 2rem 0;
+    }
+
+    .payment-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .payment-section p {
+        font-size: 0.95rem;
+    }
+
+    .payment-form {
+        padding: 1.5rem;
+    }
+
+    .payment-form h2 {
+        font-size: 1.3rem;
+    }
+
+    .offer-summary p {
+        font-size: 0.95rem;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .payment-form button {
+        font-size: 0.95rem;
+    }
+}

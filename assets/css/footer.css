@@ -1,0 +1,50 @@
+/* assets/css/footer.css */
+
+.app-footer {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.footer-logo img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    color: #E5E7EB;
+    font-size: 0.95rem;
+}
+
+.footer-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #E5E7EB;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-newsletter h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

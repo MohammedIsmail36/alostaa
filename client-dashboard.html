@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>لوحة تحكم العميل - الأسطى</title>
+        <meta name="description" content="تابع طلباتك، استعرض العروض المقدمة من الحرفيين، واختر العرض الأنسب لك عبر منصة الأسطى.">
+        <meta name="keywords" content="لوحة تحكم, طلبات العميل, عروض الحرفيين, الأسطى, السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/client-dashboard.css">
+    </head>
+    <body>
+        <!-- زر التواصل العائم -->
+        <div class="floating-action-btn">
+            <a href="#" class="contact-btn"><i class="fas fa-comments"></i></a>
+        </div>
+
+        <!-- الهيدر -->
+        <div class="app-bar">
+            <div class="app-header container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="الأسطى">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">الخدمات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">نجارة</a>
+                            <a href="#">سباكة</a>
+                            <a href="#">كهرباء</a>
+                            <a href="#">بناء</a>
+                            <a href="#">دهانات</a>
+                        </div>
+                    </div>
+                    <a href="blog.html  ">مدونتنا</a>
+                    <a href="specialties.html">التخصصات</a>
+                    <a href="signup-professional.html">انضم كحرفي</a>
+                </div>
+                <div class="user-actions">
+                    <a href="client-dashboard.html" class="active">لوحة التحكم</a>
+                    <a href="logout.html">تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم لوحة تحكم العميل -->
+        <section class="client-dashboard-section">
+            <div class="container">
+                <h1>لوحة تحكم العميل</h1>
+                <p>تابع طلباتك واستعرض العروض المقدمة من الحرفيين.</p>
+
+                <!-- قائمة الطلبات -->
+                <div class="requests-list">
+                    <div class="request-item">
+                        <div class="request-header">
+                            <h2>طلب #REQ-123456</h2>
+                            <span class="status pending">في انتظار العروض</span>
+                        </div>
+                        <div class="request-details">
+                            <p><strong>التخصص:</strong> نجارة</p>
+                            <p><strong>الوصف:</strong> إصلاح باب خشبي مكسور في غرفة النوم.</p>
+                            <p><strong>المدة المحددة:</strong> يومان</p>
+                            <p><strong>السعر المتوقع:</strong> 300 ريال</p>
+                            <p><strong>الموقع:</strong> الرياض - حي الملز</p>
+                        </div>
+                        <div class="request-offers">
+                            <h3>العروض المقدمة (2)</h3>
+                            <div class="offer-item">
+                                <div class="offer-header">
+                                    <div class="offer-author">
+                                        <img src="assets/img/001.jpg" alt="أحمد محمد" class="offer-author-img">
+                                        <div>
+                                            <a href="craftsman-profile.html">أحمد محمد</a>
+                                            <div class="offer-rating">
+                                                <i class="fas fa-star"></i> 4.5 (120 تقييم)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="offer-price">280 ريال</span>
+                                </div>
+                                <p>يمكنني إصلاح الباب بدقة عالية خلال يومين، مع ضمان الجودة.</p>
+                                <button class="btn-primary select-offer-btn" data-offer-id="offer-1">اختيار هذا العرض</button>
+                            </div>
+                            <div class="offer-item">
+                                <div class="offer-header">
+                                    <div class="offer-author">
+                                        <img src="assets/img/002.jpg" alt="خالد عبدالله" class="offer-author-img">
+                                        <div>
+                                            <a href="craftsman-profile.html">خالد عبدالله</a>
+                                            <div class="offer-rating">
+                                                <i class="fas fa-star"></i> 4.8 (90 تقييم)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="offer-price">320 ريال</span>
+                                </div>
+                                <p>سأقوم بإصلاح الباب باستخدام مواد عالية الجودة، وسأنتهي خلال يوم ونصف.</p>
+                                <button class="btn-primary select-offer-btn" data-offer-id="offer-2">اختيار هذا العرض</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="request-item">
+                        <div class="request-header">
+                            <h2>طلب #REQ-654321</h2>
+                            <span class="status in-progress">قيد التنفيذ</span>
+                        </div>
+                        <div class="request-details">
+                            <p><strong>التخصص:</strong> سباكة</p>
+                            <p><strong>الوصف:</strong> إصلاح تسرب ماء في الحمام.</p>
+                            <p><strong>المدة المحددة:</strong> يوم واحد</p>
+                            <p><strong>السعر المتفق عليه:</strong> 200 ريال</p>
+                            <p><strong>الموقع:</strong> جدة - حي الصفا</p>
+                        </div>
+                        <div class="request-offers">
+                            <h3>العرض المختار</h3>
+                            <div class="offer-item selected">
+                                <div class="offer-header">
+                                    <div class="offer-author">
+                                        <img src="assets/img/003.jpg" alt="محمد علي" class="offer-author-img">
+                                        <div>
+                                            <a href="craftsman-profile.html">محمد علي</a>
+                                            <div class="offer-rating">
+                                                <i class="fas fa-star"></i> 4.7 (150 تقييم)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="offer-price">200 ريال</span>
+                                </div>
+                                <p>سأقوم بإصلاح التسرب بسرعة وكفاءة خلال يوم واحد.</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chatModal-REQ-123456">الدردشة</button>
+                                <button class="btn-primary confirm-completion-btn" data-request-id="REQ-654321">تأكيد إتمام الخدمة</button>
+                                <button class="btn-secondary open-dispute-btn" data-request-id="REQ-654321">فتح نزاع</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal للدردشة -->
+        <div class="modal fade" id="chatModal-REQ-123456" tabindex="-1" aria-labelledby="chatModalLabel-REQ-123456" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="chatModalLabel-REQ-123456">دردشة حول طلب #REQ-123456</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="chat-details">
+                            <p><strong>التخصص:</strong> نجارة</p>
+                            <p><strong>الحرفي:</strong> أحمد محمد</p>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="messages">
+                                <div class="message received">
+                                    <p>مرحبًا، متى يمكنني زيارة الموقع لإصلاح الباب؟</p>
+                                    <span class="message-time">10:30 ص</span>
+                                </div>
+                                <div class="message sent">
+                                    <p>مرحبًا أحمد، يمكنك الحضور غدًا الساعة 2 ظهرًا. هل يناسبك؟</p>
+                                    <span class="message-time">10:32 ص</span>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" placeholder="اكتب رسالتك هنا..." disabled>
+                                <button class="btn-primary" disabled>إرسال</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal لتأكيد اختيار العرض -->
+        <div class="modal fade" id="selectOfferModal" tabindex="-1" aria-labelledby="selectOfferModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="selectOfferModalLabel">تأكيد اختيار العرض</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <p>هل أنت متأكد من اختيار هذا العرض؟ سيتم دفع المبلغ إلى المنصة وسيتم الاحتفاظ به حتى إتمام الخدمة.</p>
+                        <h6>تفاصيل العرض:</h6>
+                        <ul>
+                            <li><strong>اسم الحرفي:</strong> <span id="selectedOfferCraftsman"></span></li>
+                            <li><strong>السعر:</strong> <span id="selectedOfferPrice"></span></li>
+                            <li><strong>الوصف:</strong> <span id="selectedOfferDescription"></span></li>
+                        </ul>
+                        <div class="payment-info">
+                            <p>المبلغ سيتم حجزه في حساب المنصة حتى تؤكد إتمام الخدمة.</p>
+                            <a href="payment.html" class="btn btn-secondary">الدفع الآن</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary confirm-select-offer-btn">تأكيد الاختيار</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal لتأكيد إتمام الخدمة -->
+        <div class="modal fade" id="confirmCompletionModal" tabindex="-1" aria-labelledby="confirmCompletionModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmCompletionModalLabel">تأكيد إتمام الخدمة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p>هل أنت راضٍ عن الخدمة المقدمة؟ بتأكيدك، سيتم تحويل المبلغ إلى الحرفي.</p>
+                        <p>إذا لم تكن راضيًا، يمكنك فتح نزاع لمراجعة المشكلة.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary final-confirm-completion-btn">نعم، أنا راضٍ</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal لفتح نزاع -->
+        <div class="modal fade" id="openDisputeModal" tabindex="-1" aria-labelledby="openDisputeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="openDisputeModalLabel">فتح نزاع</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <p>يرجى وصف المشكلة التي واجهتها مع الخدمة:</p>
+                        <textarea id="disputeDescription" rows="4" class="form-control" placeholder="صف المشكلة بالتفصيل"></textarea>
+                        <div class="form-group mt-3">
+                            <label for="disputeImages">رفع صور توضيحية (اختياري)</label>
+                            <input type="file" id="disputeImages" accept="image/*" multiple>
+                            <div id="disputeImagePreview" class="image-preview"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary submit-dispute-btn">إرسال النزاع</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- التذييل -->
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="الأسطى">
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#">عن التطبيق</a>
+                        <a href="#">الشروط والأحكام</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">اتصل بنا</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#">كيفية التسجيل</a>
+                        <a href="#">نصائح للحرفيين</a>
+                        <a href="#">سياسة العمولة</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/components.js"></script>
+        <script src="assets/js/client-dashboard.js"></script>
+    </body>
+</html>

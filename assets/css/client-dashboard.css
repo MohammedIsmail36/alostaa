@@ -1,0 +1,265 @@
+/* assets/css/client-dashboard.css */
+
+/* تنسيقات قسم لوحة تحكم العميل */
+.client-dashboard-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.client-dashboard-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.client-dashboard-section p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.request-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.request-header h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.status.pending {
+    background-color: #FEF3C7;
+    color: #D97706;
+}
+
+.status.in-progress {
+    background-color: #DBEAFE;
+    color: #2563EB;
+}
+
+.status.completed {
+    background-color: #D1FAE5;
+    color: #059669;
+}
+
+.request-details p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.request-details p strong {
+    color: var(--text);
+}
+
+.request-offers {
+    margin-top: 1.5rem;
+}
+
+.request-offers h3 {
+    font-size: 1.3rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.offer-item {
+    border: 1px solid #E5E7EB;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.offer-item.selected {
+    border-color: var(--primary);
+    background-color: #EFF6FF;
+}
+
+.offer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.offer-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.offer-author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.offer-author a {
+    font-size: 1rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.offer-author a:hover {
+    color: var(--secondary);
+}
+
+.offer-rating {
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.offer-rating i {
+    color: var(--secondary);
+}
+
+.offer-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.offer-item p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.offer-item button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.offer-item .btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.offer-item .btn-primary:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.offer-item .btn-secondary {
+    background-color: #E5E7EB;
+    color: var(--text);
+    border: none;
+}
+
+.offer-item .btn-secondary:hover {
+    background-color: #D1D5DB;
+    transform: scale(1.05);
+}
+
+.payment-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #F9FAFB;
+    border-radius: var(--border-radius);
+}
+
+.payment-info p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.payment-info a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.payment-info a:hover {
+    background-color: var(--primary);
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .client-dashboard-section {
+        padding: 2rem 0;
+    }
+
+    .client-dashboard-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .client-dashboard-section p {
+        font-size: 0.95rem;
+    }
+
+    .request-item {
+        padding: 1.5rem;
+    }
+
+    .request-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .status {
+        font-size: 0.85rem;
+    }
+
+    .request-details p {
+        font-size: 0.95rem;
+    }
+
+    .request-offers h3 {
+        font-size: 1.2rem;
+    }
+
+    .offer-author-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .offer-author a {
+        font-size: 0.95rem;
+    }
+
+    .offer-rating {
+        font-size: 0.85rem;
+    }
+
+    .offer-price {
+        font-size: 1rem;
+    }
+
+    .offer-item p {
+        font-size: 0.9rem;
+    }
+
+    .offer-item button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

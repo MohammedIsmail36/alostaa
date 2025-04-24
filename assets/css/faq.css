@@ -1,0 +1,58 @@
+/* assets/css/faq.css */
+
+.faq-section {
+    background-color: var(--light-bg);
+}
+
+.faq-question {
+    background-color: var(--white);
+    position: relative; /* لتحديد مكان الأيقونة */
+}
+
+/* إزالة السهم الافتراضي لـ Bootstrap */
+.accordion-button::after {
+    display: none !important; /* إخفاء السهم الافتراضي */
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding-left: 2rem; /* إضافة مساحة للأيقونة على الجانب الأيسر */
+    position: relative; /* لتحديد مكان الأيقونة */
+}
+
+.faq-question i {
+    position: absolute; /* وضع الأيقونة في مكان محدد */
+    left: 1rem; /* وضع الأيقونة في نهاية السؤال (الجانب الأيسر في RTL) */
+    top: 50%;
+    transform: translateY(-50%); /* لتوسيط الأيقونة عموديًا */
+    transition: transform 0.3s ease;
+    color: var(--primary); /* لون الأيقونة يتماشى مع هوية الموقع */
+}
+
+/* تدوير الأيقونة عند فتح السؤال */
+.accordion-button:not(.collapsed) i {
+    transform: translateY(-50%) rotate(180deg); /* تدوير الأيقونة مع الحفاظ على التوسيط */
+}
+
+/* إزالة الـ highlight الافتراضي عند التركيز */
+.accordion-button:focus {
+    outline: none; /* إزالة الـ highlight الافتراضي */
+    box-shadow: none; /* إزالة أي ظل افتراضي من Bootstrap */
+    border-color: var(--primary); /* إضافة حدود خفيفة بلون هوية الموقع (اختياري) */
+}
+
+/* تأثير عند التركيز (اختياري) */
+.accordion-button:focus:not(.collapsed) {
+    background-color: rgba(30, 58, 138, 0.05); /* خلفية خفيفة بلون --primary مع شفافية */
+}
+
+.faq-answer {
+    background-color: var(--white);
+    border-top: 1px solid #E5E7EB;
+}
+
+.faq-answer p {
+    color: var(--light-text);
+}

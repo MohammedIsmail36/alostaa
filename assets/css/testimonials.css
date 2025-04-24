@@ -1,0 +1,17 @@
+/* assets/css/testimonials.css */
+
+.testimonial-content p {
+    font-size: 1rem;
+    color: var(--text);
+    font-style: italic;
+}
+
+.testimonial-author h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.testimonial-author .rating {
+    color: #F59E0B;
+}

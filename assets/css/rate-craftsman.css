@@ -1,0 +1,97 @@
+/* assets/css/rate-craftsman.css */
+
+/* تنسيقات قسم تقييم الحرفي */
+.rate-craftsman-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.title-content h1 {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.title-content h1 span {
+    color: var(--primary);
+}
+
+.title-content p {
+    font-size: 1rem;
+    color: var(--light-text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rate-craftsman-form {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-group .required {
+    color: #EF4444;
+}
+
+.star-rating {
+    display: flex;
+    gap: 0.5rem;
+    direction: ltr;
+    justify-content: flex-end;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2rem;
+    color: #E5E7EB;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star-rating label i {
+    transition: color 0.3s ease;
+}
+
+.star-rating input:checked ~ label i,
+.star-rating label:hover i,
+.star-rating label:hover ~ label i {
+    color: var(--secondary);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .rate-craftsman-section {
+        padding: 2rem 0;
+    }
+
+    .title-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .title-content p {
+        font-size: 0.95rem;
+    }
+
+    .rate-craftsman-form {
+        padding: 1.5rem;
+    }
+
+    .star-rating label {
+        font-size: 1.5rem;
+    }
+}

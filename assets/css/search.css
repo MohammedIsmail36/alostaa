@@ -1,0 +1,176 @@
+/* assets/css/search.css */
+
+.search-section {
+    background: var(--gradient);
+    padding: 5rem 0;
+    color: var(--white);
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.search-container {
+    position: relative;
+    z-index: 2;
+}
+
+.search-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search-container h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    color: #E5E7EB;
+}
+
+.search-box {
+    margin-bottom: 2rem;
+    background: var(--white); /* الاحتفاظ بالخلفية البيضاء للصندوق */
+}
+
+.search-field {
+    position: relative;
+}
+
+.search-field i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--light-text);
+    font-size: 1.2rem;
+}
+
+.search-box .form-select {
+    padding-right: 2.5rem;
+    border-right: 1px solid #E5E7EB;
+    background: transparent; /* إزالة الخلفية للحقول */
+    color: var(--text); /* لون النص داكن ليكون مرئيًا على الخلفية البيضاء */
+    /* إخفاء الأسهم الافتراضية */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* إضافة حدود خفيفة للحقول */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة */
+    border-radius: 0.5rem; /* زوايا مستديرة */
+    margin: 0.25rem; /* مسافة صغيرة بين الحقول */
+    transition: border-color 0.3s ease; /* تأثير انتقال سلس عند التركيز */
+}
+
+/* إزالة الحدود الجانبية بين الحقول لأننا أضفنا حدودًا كاملة */
+.search-box .form-select:last-of-type {
+    border-right: 1px solid rgba(0, 0, 0, 0.1); /* الحفاظ على تناسق الحدود */
+}
+
+/* إزالة الـ highlight عند التركيز */
+.search-box .form-select:focus {
+    outline: none; /* إزالة الـ highlight الافتراضي */
+    border-color: var(--primary); /* تغيير لون الحدود عند التركيز ليكون أزرق (اختياري) */
+    box-shadow: none; /* إزالة أي ظل افتراضي */
+}
+
+.search-box .form-select option {
+    color: var(--text); /* لون النص داخل الخيارات */
+    background: var(--white); /* خلفية الخيارات عند الفتح */
+}
+
+.search-box .btn-primary {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+
+
+/* تنسيق زر "طلب مخصص" */
+.custom-request-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-request-btn:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.search-tags {
+    margin-top: 1.5rem; /* إضافة مسافة أعلى الوسوم لتجنب التداخل مع زر "طلب مخصص" */
+}
+
+
+
+
+.search-tags .tag {
+    background: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-tags .tag:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .search-section {
+        padding: 3rem 0;
+        min-height: 400px;
+    }
+
+    .search-container h1 {
+        font-size: 2rem;
+    }
+
+    .search-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        border-radius: 25px;
+        padding: 1rem;
+    }
+
+    .search-field {
+        margin-bottom: 1rem;
+    }
+
+    .search-box .form-select {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* حدود خفيفة للشاشات الصغيرة */
+        margin: 0.5rem 0; /* مسافة بين الحقول في الشاشات الصغيرة */
+    }
+
+    .search-box .form-select:last-of-type {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* الحفاظ على تناسق الحدود */
+    }
+
+    .search-box .btn-primary {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .search-tags .tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

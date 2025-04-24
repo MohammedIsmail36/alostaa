@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>تعديل عمل - الأسطى</title>
+        <meta name="description" content="تعديل عمل موجود في معرض الأعمال الخاص بك عبر منصة الأسطى.">
+        <meta name="keywords" content="تعديل عمل, معرض الأعمال, حرفي, الأسطى, السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/add-portfolio-item.css">
+    </head>
+    <body>
+        <!-- الهيدر -->
+        <div class="app-bar">
+            <div class="app-header container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="الأسطى">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">الخدمات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">نجارة</a>
+                            <a href="#">سباكة</a>
+                            <a href="#">كهرباء</a>
+                            <a href="#">بناء</a>
+                            <a href="#">دهانات</a>
+                        </div>
+                    </div>
+                    <a href="blog.html">مدونتنا</a>
+                    <a href="specialties.html">التخصصات</a>
+                </div>
+                <div class="user-actions">
+                    <a href="#chat-section" class="chat-icon"><i class="fas fa-comments"></i> <span class="badge">2</span></a>
+                    <a href="craftsman-dashboard.html">لوحة التحكم</a>
+                    <a href="craftsman-offers.html">العروض</a>
+                    <a href="craftsman-profile.html">ملفي الشخصي</a>
+                    <a href="craftsman-settings.html">الإعدادات</a>
+                    <a href="logout.html">تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم تعديل عمل -->
+        <section class="add-portfolio-item-section">
+            <div class="container">
+                <h1>تعديل عمل</h1>
+                <p>قم بتعديل تفاصيل العمل الموجود في معرض أعمالك.</p>
+                <div class="add-portfolio-card">
+                    <form id="editPortfolioForm">
+                        <input type="hidden" id="portfolioId" value="1">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="portfolioTitle" class="form-label">عنوان العمل <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="portfolioTitle" value="أثاث خشبي مخصص" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="completionDate" class="form-label">تاريخ الإنجاز <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="completionDate" value="2025-01-10" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="portfolioCategory" class="form-label">فئة العمل <span class="text-danger">*</span></label>
+                            <select class="form-control" id="portfolioCategory" required>
+                                <option value="" disabled>اختر فئة العمل</option>
+                                <option value="نجارة" selected>نجارة</option>
+                                <option value="تصميم داخلي">تصميم داخلي</option>
+                                <option value="إصلاحات">إصلاحات</option>
+                                <option value="أعمال خشبية مخصصة">أعمال خشبية مخصصة</option>
+                                <option value="أخرى">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="portfolioDescription" class="form-label">وصف العمل <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="portfolioDescription" rows="3" required>أثاث خشبي مخصص</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="portfolioDetails" class="form-label">تفاصيل إضافية (اختياري)</label>
+                            <textarea class="form-control" id="portfolioDetails" rows="3">استخدمت خشب الزان، استغرق العمل 5 أيام.</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="portfolioImages" class="form-label">صور العمل (يمكنك رفع حتى 5 صور) <span class="text-danger">*</span></label>
+                            <input type="file" class="form-control" id="portfolioImages" accept="image/*" multiple>
+                            <small class="form-text text-muted">اختر صورًا واضحة لعرض عملك بشكل احترافي. الحد الأقصى لكل صورة 5 ميجابايت.</small>
+                            <div class="loading-indicator" id="loadingIndicator" style="display: none;">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">جارٍ التحميل...</span>
+                                </div>
+                                <span>جارٍ تحميل الصور...</span>
+                            </div>
+                            <div class="image-preview mt-3" id="imagePreview">
+                                <div class="preview-image-container">
+                                    <img src="assets/img/002.jpg" class="preview-image" alt="صورة العمل">
+                                    <button type="button" class="remove-image"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-primary" onclick="updatePortfolioItem()"><i class="fas fa-save"></i> حفظ التغييرات</button>
+                            <button type="button" class="btn btn-danger" onclick="deletePortfolioItem()"><i class="fas fa-trash"></i> حذف العمل</button>
+                            <a href="craftsman-profile.html" class="btn btn-outline-secondary"><i class="fas fa-times"></i> إلغاء</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- التذييل -->
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="الأسطى">
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#">عن التطبيق</a>
+                        <a href="#">الشروط والأحكام</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">اتصل بنا</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#">كيفية التسجيل</a>
+                        <a href="#">نصائح للحرفيين</a>
+                        <a href="#">سياسة العمولة</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/components.js"></script>
+        <script src="assets/js/edit-portfolio-item.js"></script>
+    </body>
+</html>

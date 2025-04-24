@@ -1,0 +1,295 @@
+/* assets/css/craftsman-settings.css */
+
+/* تنسيقات قسم الإعدادات */
+.craftsman-settings-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.craftsman-settings-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.craftsman-settings-section p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.settings-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* تنسيقات علامات التبويب */
+.nav-tabs {
+    border-bottom: 2px solid #E5E7EB;
+    margin-bottom: 2rem;
+}
+
+.nav-tabs .nav-link {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    background-color: transparent;
+}
+
+.tab-content {
+    padding: 1rem 0;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    padding: 0.75rem;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
+}
+
+.form-control.is-invalid {
+    border-color: #EF4444;
+}
+
+.form-control.is-valid {
+    border-color: #10B981;
+}
+
+.image-preview {
+    display: flex;
+    gap: 1rem;
+}
+
+.preview-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    border: 1px solid #E5E7EB;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* تنسيقات المعاينة في النافذة المنبثقة */
+.worker-profile-header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.worker-image-container {
+    position: relative;
+}
+
+.worker-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+}
+
+.badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.badge.featured {
+    background-color: #F59E0B;
+    color: var(--white);
+}
+
+.badge.verified {
+    background-color: #10B981;
+    color: var(--white);
+}
+
+.worker-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.worker-specialty {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.worker-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.worker-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.worker-meta i {
+    color: var(--secondary);
+}
+
+.worker-bio {
+    margin-top: 1rem;
+}
+
+.worker-bio h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.worker-bio p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .craftsman-settings-section {
+        padding: 2rem 0;
+    }
+
+    .craftsman-settings-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .craftsman-settings-section p {
+        font-size: 0.95rem;
+    }
+
+    .settings-card {
+        padding: 1.5rem;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .form-label {
+        font-size: 0.95rem;
+    }
+
+    .form-control {
+        padding: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .preview-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .worker-profile-header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .worker-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .worker-info h1 {
+        font-size: 1.3rem;
+    }
+
+    .worker-specialty {
+        font-size: 0.9rem;
+    }
+
+    .worker-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .worker-bio h2 {
+        font-size: 1.2rem;
+    }
+
+    .worker-bio p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>إضافة عمل جديد - الأسطى</title>
+        <meta name="description" content="إضافة عمل جديد إلى معرض الأعمال الخاص بك عبر منصة الأسطى.">
+        <meta name="keywords" content="إضافة عمل, معرض الأعمال, حرفي, الأسطى, السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="header.css">
+    </head>
+    <body>
+
+        <!-- ======================= start Header ====================== -->
+        <!-- Header -->
+        <nav class="app-bar navbar navbar-expand-lg navbar-light shadow-sm">
+            <div class="container">
+                <!-- الشعار -->
+                <a class="navbar-brand logo d-flex align-items-center gap-2" href="index.html">
+                    <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489 489" xml:space="preserve">
+                        <path fill="#1E3A8A" d="M21.9 265.3h445.3c11.4 0 20.8-9.4 20.8-20.8s-9.4-20.8-20.8-20.8h-14.7C441.8 115.9 354.6 0 244.5 0S47.2 115.8 35.7 223.7H21.9c-11.4 0-20.8 9.4-20.8 20.8s9.3 20.8 20.8 20.8M268.4 43.1v91.2h-54.1V44.5c9.8-2.5 19.9-3.9 30.2-3.9 8.1 0 16.1.9 23.9 2.5m-95.7 20.2V155c0 11.4 9.4 20.8 20.8 20.8h95.7c11.4 0 20.8-9.4 20.8-20.8V59.4c54.6 32.3 94.2 100.7 100.9 164.3H77.3c7.3-61.4 44.2-126.8 95.4-160.4"/>
+                        <path fill="#F59E0B" d="M468.2 447.4h-48.9l-18.7-31.2 18.7-31.2h48.9c11.4 0 20.8-9.4 20.8-20.8s-9.4-20.8-20.8-20.8h-60.3c-7.3 0-13.5 4.2-17.7 10.4l-24.1 41.6h-243L99 353.8c-4.2-6.2-10.4-10.4-17.7-10.4H20.8C9.4 343.4 0 352.8 0 364.2S9.4 385 20.8 385h48.9l18.7 31.2-18.7 31.2H20.8C9.4 447.4 0 456.8 0 468.2S9.4 489 20.8 489h60.3c7.3 0 13.5-4.2 17.7-10.4l24.1-41.6h243l24.1 41.6c4.2 6.2 10.4 10.4 17.7 10.4H468c11.4 0 20.8-9.4 20.8-20.8s-9.2-20.8-20.6-20.8"/>
+                    </svg>
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                        <small class="tagline d-none d-md-block">منصة الحرفيين الموثوقة</small>
+                    </div>
+                </a>
+
+                <!-- زر القائمة في الشاشات الصغيرة -->
+                <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- الروابط -->
+                    <ul class="navbar-nav mx-auto nav-links">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                            id="servicesDropdown" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-tools me-1"></i> الخدمات
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-hammer me-2"></i> نجارة</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-wrench me-2"></i> سباكة</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-bolt me-2"></i> كهرباء</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-trowel me-2"></i> بناء</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-paint-roller me-2"></i> دهانات</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html"><i class="fas fa-blog me-1"></i> مدونتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="specialties.html"><i class="fas fa-list me-1"></i> التخصصات</a>
+                        </li>
+                    </ul>
+
+                    <!-- شريط البحث -->
+                    <form class="d-flex search-bar mx-3 d-none d-lg-flex">
+                        <input class="form-control me-2" type="search" placeholder="ابحث عن خدمة..." aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+
+                    <!-- إجراءات المستخدم -->
+                    <div class="user-actions d-flex align-items-center gap-2">
+                        <!-- قبل تسجيل الدخول -->
+                        <div class="guest-actions d-flex gap-2" id="guestActions">
+                            <a href="login.html" class="btn btn-primary">تسجيل الدخول</a>
+                            <a href="signup-client.html" class="btn btn-outline-secondary">تسجيل جديد كعميل</a>
+                            <a href="signup-professional.html" class="btn btn-craftsman">انضم كحرفي</a>
+                        </div>
+
+                        <!-- بعد تسجيل الدخول (عميل) -->
+                        <div class="client-actions d-none dropdown" id="clientActions">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="clientDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/user-placeholder.png" alt="صورة العميل" class="user-avatar rounded-circle me-2">
+                                <span>اسم العميل</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="clientDropdown">
+                                <li><a class="dropdown-item" href="client-profile.html"><i class="fas fa-user me-2"></i> حسابي</a></li>
+                                <li><a class="dropdown-item" href="client-orders.html"><i class="fas fa-list-alt me-2"></i> طلباتي</a></li>
+                                <li><a class="dropdown-item" href="logout.html"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- بعد تسجيل الدخول (حرفي) -->
+                        <div class="professional-actions d-none dropdown" id="professionalActions">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="professionalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/user-placeholder.png" alt="صورة الحرفي" class="user-avatar rounded-circle me-2">
+                                <span>اسم الحرفي</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="professionalDropdown">
+                                <li><a class="dropdown-item" href="professional-profile.html"><i class="fas fa-user me-2"></i> حسابي</a></li>
+                                <li><a class="dropdown-item" href="professional-jobs.html"><i class="fas fa-briefcase me-2"></i> عروض العمل</a></li>
+                                <li><a class="dropdown-item" href="professional-settings.html"><i class="fas fa-cog me-2"></i> إعدادات الملف الشخصي</a></li>
+                                <li><a class="dropdown-item" href="logout.html"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- بعد تسجيل الدخول (إداري) -->
+                        <div class="admin-actions d-none dropdown" id="adminActions">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/user-placeholder.png" alt="صورة الإداري" class="user-avatar rounded-circle me-2">
+                                <span>اسم الإداري</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="adminDropdown">
+                                <li><a class="dropdown-item" href="admin-dashboard.html"><i class="fas fa-tachometer-alt me-2"></i> لوحة التحكم</a></li>
+                                <li><a class="dropdown-item" href="admin-blog-list.html"><i class="fas fa-blog me-2"></i> إدارة المدونات</a></li>
+                                <li><a class="dropdown-item" href="admin-users.html"><i class="fas fa-users me-2"></i> إدارة المستخدمين</a></li>
+                                <li><a class="dropdown-item" href="logout.html"><i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- زر تبديل اللغة (معطل مؤقتًا) -->
+                        <button class="btn btn-outline-secondary language-toggle d-none" id="languageToggle" aria-label="تبديل اللغة">
+                            <i class="fas fa-globe"></i> العربية
+                        </button>
+
+                        <!-- زر الوضع المظلم -->
+                        <button class="btn btn-outline-secondary theme-toggle" id="themeToggle" aria-label="تبديل الوضع المظلم">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ======================= //End Header ======================= -->
+
+        <!-- ======================= start Footer ======================== -->
+        <!-- Footer -->
+        <!-- ======================= End Footer =========================== -->
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

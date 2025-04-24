@@ -1,0 +1,56 @@
+/* assets/css/admin-login.css */
+
+.admin-login-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.login-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.login-card .logo {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.login-card h1 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.login-card .form-label {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.login-card .form-control {
+    border-radius: var(--border-radius);
+}
+
+.login-card .btn-primary {
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .admin-login-section {
+        padding: 2rem 0;
+    }
+
+    .login-card {
+        padding: 1.5rem;
+    }
+
+    .login-card h1 {
+        font-size: 1.2rem;
+    }
+}

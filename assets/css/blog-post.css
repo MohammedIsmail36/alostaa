@@ -1,0 +1,139 @@
+/* assets/css/blog-post.css */
+
+/* تنسيقات قسم المدونة */
+.blog-post-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.blog-post-header {
+    margin-bottom: 2rem;
+}
+
+.blog-post-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.blog-post-meta {
+    text-align: center;
+}
+
+.blog-post-meta .blog-category {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-meta h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.meta-info {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.meta-info span {
+    margin-left: 1rem;
+}
+
+.meta-info i {
+    color: var(--secondary);
+}
+
+.blog-post-content {
+    font-size: 1rem;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.blog-post-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.blog-post-content p {
+    margin-bottom: 1rem;
+}
+
+.content-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+}
+
+.comments-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.comment-item {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+}
+
+.comment-item p {
+    margin: 0;
+}
+
+.comment-item p:first-child {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.related-posts h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .blog-post-section {
+        padding: 2rem 0;
+    }
+
+    .blog-post-image {
+        height: 250px;
+    }
+
+    .blog-post-meta h1 {
+        font-size: 1.5rem;
+    }
+
+    .blog-post-content {
+        font-size: 0.95rem;
+    }
+
+    .blog-post-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .content-image {
+        height: 200px;
+    }
+
+    .comments-section h2,
+    .related-posts h2 {
+        font-size: 1.3rem;
+    }
+}

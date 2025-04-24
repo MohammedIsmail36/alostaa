@@ -1,0 +1,57 @@
+/* assets/css/category.css */
+
+.category-icon-wrapper {
+    background-color: var(--light-bg);
+    padding: 2rem 0; /* تقليل الـ padding لضمان التمركز */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.category-icon i {
+    line-height: 1; /* التأكد من أن الأيقونة لا تحتوي على ارتفاع إضافي */
+}
+
+.category-card:hover .category-icon {
+    background-color: var(--secondary);
+}
+
+.category-details h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.category-details p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+.workers-count {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.average-rating {
+    color: #F59E0B;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.average-rating i {
+    margin-left: 0.3rem;
+}

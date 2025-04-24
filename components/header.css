@@ -1,0 +1,170 @@
+/* assets/css/header.css */
+
+.app-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--gradient); /* تدرج من الأزرق الداكن إلى الأزرق الفاتح */
+    border-bottom: 1px solid var(--primary);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text h1 {
+    color: var(--white); /* لون أبيض ليتناسب مع خلفية التدرج */
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo-text .tagline {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+.nav-links .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+    color: var(--secondary);
+}
+
+.nav-links .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--secondary);
+    transition: width 0.3s ease;
+}
+
+.nav-links .nav-link:hover::after {
+    width: 100%;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-menu {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+    background-color: var(--white);
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: var(--primary);
+    background-color: var(--light-bg);
+}
+
+.search-bar .form-control {
+    border-radius: 20px;
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    color: var(--text);
+}
+
+.search-bar .btn {
+    border-radius: 20px;
+}
+
+.user-actions .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-craftsman {
+    background-color: var(--craftsman);
+    color: var(--white);
+    border: none;
+}
+
+.btn-craftsman:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.theme-toggle,
+.language-toggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo-text .tagline {
+        display: none;
+    }
+
+    .nav-links .nav-link {
+        font-size: 0.9rem;
+        color: var(--text);
+    }
+
+    .user-actions .btn {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .search-bar {
+        margin: 1rem 0;
+    }
+
+    .dropdown-menu {
+        background-color: var(--light-bg);
+    }
+}

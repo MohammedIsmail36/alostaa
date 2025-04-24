@@ -1,0 +1,623 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>الأسطى - منصة تأجير الحرفيين المحترفين في السعودية</title>
+        <meta name="description" content="ابحث عن حرفيين محترفين لجميع احتياجاتك مع الأسطى. خدمات نجارة، سباكة، كهرباء وأكثر بأسعار تنافسية وجودة مضمونة.">
+        <meta name="keywords" content="تأجير حرفيين, نجار, سباك, كهربائي, بناء, صيانة, خدمات منزلية, الأسطى, السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Google Fonts (Tajawal) -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/floating-btn.css">
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/search.css">
+        <link rel="stylesheet" href="assets/css/section-title.css">
+        <link rel="stylesheet" href="assets/css/category.css">
+        <link rel="stylesheet" href="assets/css/worker.css">
+        <link rel="stylesheet" href="assets/css/testimonials.css">
+        <link rel="stylesheet" href="assets/css/how-it-works.css">
+        <link rel="stylesheet" href="assets/css/why-choose-us.css">
+        <link rel="stylesheet" href="assets/css/faq.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/bottom-nav.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+    </head>
+    <body>
+        <!-- زر التواصل العائم -->
+        <div class="floating-action-btn">
+            <a href="#" class="contact-btn"><i class="fas fa-comments"></i></a>
+        </div>
+
+        <!-- شريط التصفح العلوي -->
+        <nav class="app-bar navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto nav-links">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                            id="servicesDropdown" 
+                            role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                                الخدمات
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="#">نجارة</a></li>
+                                <li><a class="dropdown-item" href="#">سباكة</a></li>
+                                <li><a class="dropdown-item" href="#">كهرباء</a></li>
+                                <li><a class="dropdown-item" href="#">بناء</a></li>
+                                <li><a class="dropdown-item" href="#">دهانات</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">مدونتنا</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="specialties.html">التخصصات</a>
+                        </li>
+                    </ul>
+                    <div class="user-actions d-flex gap-2">
+                        <a href="login.html" class="btn btn-primary">تسجيل الدخول</a>
+                        <a href="signup-client.html" class="btn btn-secondary">تسجيل جديد كعميل</a>
+                        <a href="signup-professional.html" class="btn btn-secondary">انضم كحرفي</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- قسم البحث -->
+        <section class="search-section">
+            <div class="search-container container text-center">
+                <h1>ابحث عن الحرفي المثالي لعملك</h1>
+                <h3>منصتك الموثوقة لتأجير الحرفيين بسهولة وسرعة</h3>
+                <div class="search-box d-flex align-items-center bg-white rounded-pill shadow p-2">
+                    <div class="search-field flex-fill">
+                        <i class="fas fa-briefcase"></i>
+                        <select class="form-select border-0">
+                            <option value="">اختر المهنة</option>
+                            <option value="نجار">نجار</option>
+                            <option value="سباك">سباك</option>
+                            <option value="كهربائي">كهربائي</option>
+                            <option value="بناء">بناء</option>
+                            <option value="نقاش">نقاش</option>
+                        </select>
+                    </div>
+                    <div class="search-field flex-fill">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <select class="form-select border-0">
+                            <option value="">اختر المدينة</option>
+                            <option value="الرياض">الرياض</option>
+                            <option value="جدة">جدة</option>
+                            <option value="الدمام">الدمام</option>
+                            <option value="مكة">مكة</option>
+                            <option value="المدينة">المدينة</option>
+                        </select>
+                    </div>
+                    <div class="search-field flex-fill">
+                        <i class="fas fa-star"></i>
+                        <select class="form-select border-0">
+                            <option value="">التقييم</option>
+                            <option value="4+">4 نجوم وأعلى</option>
+                            <option value="3+">3 نجوم وأعلى</option>
+                        </select>
+                    </div>
+                    <div class="search-field flex-fill">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <select class="form-select border-0">
+                            <option value="">السعر للساعة</option>
+                            <option value="30-50">30-50 ريال</option>
+                            <option value="50-100">50-100 ريال</option>
+                            <option value="100+">100+ ريال</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary rounded-circle"><i class="fas fa-search"></i></button>
+                </div>
+                <!-- إضافة رابط "طلب مخصص" -->
+                <div class="text-center mt-3">
+                    <p >لا تجد ما تبحث عنه؟ اطلب خدمة مخصصة الآن!</p>
+                    <a href="custom-request.html" class="btn btn-secondary custom-request-btn">
+                        اطلب خدمة مخصصة
+                    </a>
+                </div>
+                <div class="search-tags d-flex flex-wrap justify-content-center gap-2">
+                    <a href="#" class="tag btn btn-outline-light">نجار</a>
+                    <a href="#" class="tag btn btn-outline-light">سباك</a>
+                    <a href="#" class="tag btn btn-outline-light">كهربائي</a>
+                    <a href="#" class="tag btn btn-outline-light">بناء</a>
+                    <a href="#" class="tag btn btn-outline-light">نقاش</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التصنيفات -->
+        <section class="categories py-5 bg-white">
+            <div class="container">
+                <div class="section-title d-flex justify-content-between align-items-center mb-4">
+                    <div class="title-content">
+                        <h2>خدماتنا المتخصصة</h2>
+                        <p>اختر الحرفي المناسب من مجموعة متنوعة من التخصصات المهنية</p>
+                    </div>
+                    <a href="#" class="view-all-btn">
+                        <span>عرض جميع التخصصات</span>
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                </div>
+                <div class="row categories-grid">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-hammer"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">النجارة</h3>
+                                <p class="card-text">تصميم وتنفيذ أعمال النجارة المتقدمة</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">25 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.7
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-faucet"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">السباكة</h3>
+                                <p class="card-text">حلول متكاملة لأعمال السباكة والصيانة</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">18 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.5
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">الكهرباء</h3>
+                                <p class="card-text">خدمات كهربائية احترافية وآمنة</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">30 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.8
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">البناء والتشييد</h3>
+                                <p class="card-text">إنشاءات متكاملة بمعايير جودة عالية</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">22 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.6
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-paint-roller"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">الدهانات والديكور</h3>
+                                <p class="card-text">تجميل وتشطيب بأحدث التقنيات</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">15 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.4
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-trowel"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">التبليط</h3>
+                                <p class="card-text">تركيبات متقنة للسيراميك والرخام</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">12 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.5
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">الحدادة</h3>
+                                <p class="card-text">أعمال حدادة وألمنيوم متخصصة</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">20 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.6
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="category-card card h-100 shadow-sm">
+                            <div class="category-icon-wrapper text-center py-4 bg-light">
+                                <div class="category-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                            </div>
+                            <div class="card-body category-details text-center">
+                                <h3 class="card-title">صيانة التكييف</h3>
+                                <p class="card-text">خدمات تكييف وصيانة متكاملة</p>
+                                <div class="category-meta d-flex justify-content-between pt-3 border-top">
+                                    <span class="workers-count">17 حرفي</span>
+                                    <span class="average-rating">
+                                        <i class="fas fa-star"></i> 4.7
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الحرفيين المميزين -->
+        <section class="featured-workers py-5">
+            <div class="container">
+                <div class="section-title d-flex justify-content-between align-items-center mb-4">
+                    <div class="title-content">
+                        <h2>حرفيون مميزون</h2>
+                    </div>
+                    <a href="#" class="view-all-btn">عرض الكل</a>
+                </div>
+                <div class="row workers-grid">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="worker-card card shadow-sm">
+                            <div class="worker-image position-relative">
+                                <img src="assets/img/001.jpg" class="card-img-top" alt="أحمد محمد">
+                                <div class="worker-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                            <div class="card-body worker-info">
+                                <h3 class="card-title">أحمد محمد</h3>
+                                <div class="worker-specialty">نجار محترف</div>
+                                <div class="worker-meta d-flex justify-content-between">
+                                    <span>10 سنوات خبرة</span>
+                                    <span>50 مشروعًا مكتملًا</span>
+                                </div>
+                                <div class="worker-price">50 ريال/ساعة</div>
+                                <a href="craftsman-profile.html" class="btn btn-secondary w-100">عرض الملف الشخصي</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="worker-card card shadow-sm">
+                            <div class="worker-image position-relative">
+                                <img src="assets/img/002.jpg" class="card-img-top" alt="سالم عبد الله">
+                                <div class="worker-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <div class="card-body worker-info">
+                                <h3 class="card-title">سالم عبد الله</h3>
+                                <div class="worker-specialty">سباك ممتاز</div>
+                                <div class="worker-meta d-flex justify-content-between">
+                                    <span>8 سنوات خبرة</span>
+                                    <span>40 مشروعًا مكتملًا</span>
+                                </div>
+                                <div class="worker-price">45 ريال/ساعة</div>
+                                <a href="craftsman-profile.html" class="btn btn-secondary w-100">عرض الملف الشخصي</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="worker-card card shadow-sm">
+                            <div class="worker-image position-relative">
+                                <img src="assets/img/003.jpg" class="card-img-top" alt="إبراهيم علي">
+                                <div class="worker-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="card-body worker-info">
+                                <h3 class="card-title">إبراهيم علي</h3>
+                                <div class="worker-specialty">كهربائي خبير</div>
+                                <div class="worker-meta d-flex justify-content-between">
+                                    <span>12 سنة خبرة</span>
+                                    <span>60 مشروعًا مكتملًا</span>
+                                </div>
+                                <div class="worker-price">60 ريال/ساعة</div>
+                                <a href="craftsman-profile.html" class="btn btn-secondary w-100">عرض الملف الشخصي</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم آراء العملاء -->
+        <section class="testimonials-section py-5 bg-white">
+            <div class="container">
+                <div class="section-title d-flex justify-content-center mb-4">
+                    <div class="title-content">
+                        <h2>ماذا يقول عملاؤنا؟</h2>
+                    </div>
+                </div>
+                <div class="row testimonials-grid">
+                    <div class="col-lg-6 mb-4">
+                        <div class="testimonial-card card shadow-sm p-4">
+                            <div class="testimonial-content">
+                                <p class="card-text">"خدمة ممتازة! الحرفي كان محترفًا وأنجز العمل بسرعة ودقة."</p>
+                                <div class="testimonial-author d-flex align-items-center gap-3">
+                                    <img src="assets/img/001.jpg" alt="سارة عبد الله" class="rounded-circle" width="50" height="50">
+                                    <div>
+                                        <h4 class="card-title">سارة عبد الله</h4>
+                                        <div class="rating text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="testimonial-card card shadow-sm p-4">
+                            <div class="testimonial-content">
+                                <p class="card-text">"أفضل منصة لتأجير الحرفيين، الأسعار مناسبة والخدمة رائعة."</p>
+                                <div class="testimonial-author d-flex align-items-center gap-3">
+                                    <img src="assets/img/002.jpg" alt="محمد خالد" class="rounded-circle" width="50" height="50">
+                                    <div>
+                                        <h4 class="card-title">محمد خالد</h4>
+                                        <div class="rating text-warning">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم كيف يعمل التطبيق -->
+        <section class="how-it-works py-5">
+            <div class="container">
+                <div class="section-title d-flex justify-content-center mb-4">
+                    <div class="title-content">
+                        <h2>كيف يعمل التطبيق؟</h2>
+                    </div>
+                </div>
+                <div class="row steps">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="step card shadow-sm text-center p-4">
+                            <div class="step-icon"><i class="fas fa-search"></i></div>
+                            <h3 class="card-title">ابحث عن الحرفي</h3>
+                            <p class="card-text">ابحث عن الحرفي المناسب حسب التخصص والتقييمات</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="step card shadow-sm text-center p-4">
+                            <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <h3 class="card-title">حدد الموعد</h3>
+                            <p class="card-text">اختر الوقت المناسب لك وللحرفي</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="step card shadow-sm text-center p-4">
+                            <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                            <h3 class="card-title">استلم الخدمة</h3>
+                            <p class="card-text">استلم الخدمة بجودة عالية وادفع بسهولة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم لماذا تختارنا -->
+        <section class="why-choose-us py-5 bg-white">
+            <div class="container">
+                <div class="section-title d-flex justify-content-center mb-4">
+                    <div class="title-content">
+                        <h2>لماذا تختار الأسطى؟</h2>
+                    </div>
+                </div>
+                <div class="row features-grid">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="feature-card card shadow-sm text-center p-4">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3 class="card-title">حرفيون موثوقون</h3>
+                            <p class="card-text">جميع الحرفيين لدينا تم التحقق منهم لضمان الجودة.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="feature-card card shadow-sm text-center p-4">
+                            <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <h3 class="card-title">أسعار تنافسية</h3>
+                            <p class="card-text">نقدم أفضل الأسعار مع ضمان الجودة.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="feature-card card shadow-sm text-center p-4">
+                            <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                            <h3 class="card-title">دفع آمن</h3>
+                            <p class="card-text">خيارات دفع آمنة ومرنة تناسب احتياجاتك.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة -->
+        <section class="faq-section py-5">
+            <div class="container">
+                <div class="section-title d-flex justify-content-center mb-4">
+                    <div class="title-content">
+                        <h2>الأسئلة الشائعة</h2>
+                    </div>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    كيف يتم اختيار الحرفيين؟
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show faq-answer" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    يتم اختيار الحرفيين بناءً على خبرتهم، تقييمات العملاء السابقين، وشهاداتهم المهنية.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ما هي سياسة الإلغاء؟
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse faq-answer" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    يمكنك إلغاء الحجز قبل 24 ساعة من الموعد دون أي رسوم إضافية.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    كيف يتم الدفع؟
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse faq-answer" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    نقدم خيارات دفع متعددة تشمل الدفع الإلكتروني والدفع عند الاستلام.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- التذييل -->
+        <footer class="app-footer py-5">
+            <div class="container">
+                <div class="footer-top row">
+                    <div class="col-lg-3 col-md-6 mb-4 footer-logo">
+                        <div class="logo-text">
+                            <h2>الأسطى</h2>
+                        </div>
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#" class="d-block mb-2">عن التطبيق</a>
+                        <a href="#" class="d-block mb-2">الشروط والأحكام</a>
+                        <a href="#" class="d-block mb-2">سياسة الخصوصية</a>
+                        <a href="#" class="d-block mb-2">اتصل بنا</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#" class="d-block mb-2">كيفية التسجيل</a>
+                        <a href="#" class="d-block mb-2">نصائح للحرفيين</a>
+                        <a href="#" class="d-block mb-2">سياسة العمولة</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form class="d-flex gap-2">
+                            <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links d-flex justify-content-center gap-4 mb-4">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright text-center">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
+        <script src="assets/js/shared.js"></script>
+        <script src="assets/js/faq.js"></script>
+        <script src="assets/js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>إدارة العروض - الأسطى</title>
+        <meta name="description" content="إدارة عروضك المقدمة، المقبولة، والمكتملة بسهولة عبر منصة الأسطى.">
+        <meta name="keywords" content="عروض، الأسطى، خدمات منزلية، السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/offers.css">
+    </head>
+    <body>
+        <!-- الهيدر -->
+        <div class="app-bar">
+            <div class="app-header container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="الأسطى">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">الخدمات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">نجارة</a>
+                            <a href="#">سباكة</a>
+                            <a href="#">كهرباء</a>
+                            <a href="#">بناء</a>
+                            <a href="#">دهانات</a>
+                        </div>
+                    </div>
+                    <a href="blog.html">مدونتنا</a>
+                    <a href="specialties.html">التخصصات</a>
+                </div>
+                <div class="user-actions">
+                    <a href="#chat-section" class="chat-icon"><i class="fas fa-comments"></i> <span class="badge">2</span></a>
+                    <a href="craftsman-dashboard.html">لوحة التحكم</a>
+                    <a href="craftsman-offers.html" class="active">العروض</a>
+                    <a href="logout.html">تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم إدارة العروض -->
+        <section class="offers-section">
+            <div class="container">
+                <h1>إدارة العروض</h1>
+                <p>تابع وأدر عروضك المقدمة، المقبولة، والمكتملة بسهولة.</p>
+
+                <!-- أدوات الفلترة والترتيب -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="status-filter"><i class="fas fa-filter"></i> الحالة:</label>
+                        <select id="status-filter" onchange="filterOffers()">
+                            <option value="all">الكل</option>
+                            <option value="submitted">مقدم</option>
+                            <option value="accepted">مقبول</option>
+                            <option value="completed">مكتمل</option>
+                            <option value="rejected">مرفوض</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="specialty-filter"><i class="fas fa-tools"></i> التخصص:</label>
+                        <select id="specialty-filter" onchange="filterOffers()">
+                            <option value="all">الكل</option>
+                            <option value="carpentry">نجارة</option>
+                            <option value="plumbing">سباكة</option>
+                            <option value="electricity">كهرباء</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-by"><i class="fas fa-sort"></i> ترتيب حسب:</label>
+                        <select id="sort-by" disabled>
+                            <option value="newest">الأحدث</option>
+                            <option value="oldest">الأقدم</option>
+                            <option value="price-high">السعر (عالي إلى منخفض)</option>
+                            <option value="price-low">السعر (منخفض إلى عالي)</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary" onclick="resetFilters()">إعادة تعيين</button>
+                </div>
+
+                <!-- قائمة العروض -->
+                <div class="offers-list" id="offers-list">
+                    <!-- عرض مقدم -->
+                    <div class="offer-card" data-status="submitted" data-specialty="plumbing">
+                        <div class="offer-header">
+                            <h3><i class="fas fa-file-alt"></i> طلب #REQ-456789</h3>
+                            <span class="status submitted">مقدم</span>
+                        </div>
+                        <div class="offer-body">
+                            <p><strong>العميل:</strong> فاطمة أحمد</p>
+                            <p><strong>التخصص:</strong> سباكة</p>
+                            <p><strong>السعر المقترح:</strong> 300 ريال</p>
+                            <p><strong>الوصف:</strong> سأقوم بإصلاح التسرب في المطبخ خلال يومين.</p>
+                            <p><strong>الوقت المتوقع:</strong> يومان</p>
+                            <p><strong>تاريخ التقديم:</strong> 25 مارس 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- عرض مقبول -->
+                    <div class="offer-card" data-status="accepted" data-specialty="carpentry">
+                        <div class="offer-header">
+                            <h3><i class="fas fa-check-circle"></i> طلب #REQ-123456</h3>
+                            <span class="status accepted">مقبول</span>
+                        </div>
+                        <div class="offer-body">
+                            <p><strong>العميل:</strong> محمد عبدالرحمن</p>
+                            <p><strong>التخصص:</strong> نجارة</p>
+                            <p><strong>السعر المقترح:</strong> 200 ريال</p>
+                            <p><strong>الوصف:</strong> سأقوم بإصلاح الباب خلال يوم واحد</p>
+                            <p><strong>الوقت المتوقع:</strong> يوم واحد</p>
+                            <p><strong>تاريخ القبول:</strong> 26 مارس 2025</p>
+                        </div>
+                        <div class="offer-actions">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chatModal-REQ-123456">الدردشة</button>
+                        </div>
+                    </div>
+
+                    <!-- عرض مكتمل -->
+                    <div class="offer-card" data-status="completed" data-specialty="plumbing">
+                        <div class="offer-header">
+                            <h3><i class="fas fa-check-double"></i> طلب #REQ-789123</h3>
+                            <span class="status completed">مكتمل</span>
+                        </div>
+                        <div class="offer-body">
+                            <p><strong>العميل:</strong> سارة العلي</p>
+                            <p><strong>التخصص:</strong> سباكة</p>
+                            <p><strong>السعر:</strong> 150 ريال</p>
+                            <p><strong>الوصف:</strong> تم إصلاح تسرب الماء في الحمام.</p>
+                            <p><strong>تاريخ الإكمال:</strong> 20 مارس 2025</p>
+                        </div>
+                    </div>
+
+                    <!-- عرض مرفوض -->
+                    <div class="offer-card" data-status="rejected" data-specialty="electricity">
+                        <div class="offer-header">
+                            <h3><i class="fas fa-times-circle"></i> طلب #REQ-101112</h3>
+                            <span class="status rejected">مرفوض</span>
+                        </div>
+                        <div class="offer-body">
+                            <p><strong>العميل:</strong> خالد عبدالله</p>
+                            <p><strong>التخصص:</strong> كهرباء</p>
+                            <p><strong>السعر المقترح:</strong> 250 ريال</p>
+                            <p><strong>الوصف:</strong> سأقوم بتركيب إضاءة جديدة في الصالة.</p>
+                            <p><strong>تاريخ الرفض:</strong> 22 مارس 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal للدردشة -->
+        <div class="modal fade" id="chatModal-REQ-123456" tabindex="-1" aria-labelledby="chatModalLabel-REQ-123456" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="chatModalLabel-REQ-123456">الدردشة حول طلب #REQ-123456</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="chat-messages">
+                            <div class="messages">
+                                <div class="message sent">
+                                    <p>مرحبًا، متى يمكنني زيارة الموقع لإصلاح الباب؟</p>
+                                    <span class="message-time">10:30 ص</span>
+                                </div>
+                                <div class="message received">
+                                    <p>مرحبًا أحمد، يمكنك الحضور غدًا الساعة 2 ظهرًا. هل يناسبك؟</p>
+                                    <span class="message-time">10:32 ص</span>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" placeholder="اكتب رسالتك هنا..." disabled>
+                                <button class="btn-primary" disabled>إرسال</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- التذييل -->
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="الأسطى">
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#">عن التطبيق</a>
+                        <a href="#">الشروط والأحكام</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">اتصل بنا</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#">كيفية التسجيل</a>
+                        <a href="#">نصائح للحرفيين</a>
+                        <a href="#">سياسة العمولة</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/components.js"></script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+/* assets/css/signup-client.css */
+
+/* تنسيقات قسم التسجيل */
+.signup-section {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/signup-bg.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.title-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title-content p {
+    font-size: 1.1rem;
+    color: var(--text);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.signup-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-group .required {
+    color: #EF4444;
+}
+
+.input-group-text {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.form-group input {
+    border-radius: 0 5px 5px 0;
+}
+
+.form-note {
+    font-size: 0.95rem;
+    color: var(--light-text);
+}
+
+.form-note a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.form-note a:hover {
+    color: var(--secondary);
+}
+
+/* استجابة */
+@media (max-width: 768px) {
+    .signup-section {
+        padding: 2rem 0;
+    }
+
+    .title-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .title-content p {
+        font-size: 1rem;
+    }
+
+    .signup-form {
+        padding: 1.5rem;
+    }
+}

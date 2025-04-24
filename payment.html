@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- تحسينات SEO -->
+        <title>إتمام الدفع - الأسطى</title>
+        <meta name="description" content="أكمل عملية الدفع بأمان عبر منصة الأسطى لتأكيد طلبك.">
+        <meta name="keywords" content="دفع, الأسطى, خدمات منزلية, السعودية">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="الأسطى">
+        <meta name="language" content="ar">
+
+        <!-- روابط المكتبات -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+        <!-- روابط CSS -->
+        <link rel="stylesheet" href="assets/css/shared.css">
+        <link rel="stylesheet" href="assets/css/payment.css">
+    </head>
+    <body>
+        <!-- الهيدر -->
+        <div class="app-bar">
+            <div class="app-header container">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="الأسطى">
+                    <div class="logo-text">
+                        <h1>الأسطى</h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle">الخدمات <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">نجارة</a>
+                            <a href="#">سباكة</a>
+                            <a href="#">كهرباء</a>
+                            <a href="#">بناء</a>
+                            <a href="#">دهانات</a>
+                        </div>
+                    </div>
+                    <a href="blog.html">مدونتنا</a>
+                    <a href="specialties.html">التخصصات</a>
+                </div>
+                <div class="user-actions">
+                    <a href="client-dashboard.html" class="active">لوحة التحكم</a>
+                    <a href="logout.html">تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم الدفع -->
+        <section class="payment-section">
+            <div class="container">
+                <h1>إتمام الدفع</h1>
+                <p>أدخل بيانات الدفع لتأكيد طلبك. سيتم الاحتفاظ بالمبلغ حتى إتمام الخدمة.</p>
+
+                <div class="payment-form">
+                    <h2>ملخص العرض</h2>
+                    <div class="offer-summary">
+                        <p><strong>اسم الحرفي:</strong> أحمد محمد</p>
+                        <p><strong>السعر:</strong> 200 ريال</p>
+                        <p><strong>الوصف:</strong> سأقوم بإصلاح التسرب بسرعة وكفاءة خلال يوم واحد.</p>
+                    </div>
+
+                    <h2>بيانات الدفع</h2>
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label for="card-number">رقم البطاقة</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" disabled>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="card-expiry">تاريخ الانتهاء</label>
+                                <input type="text" id="card-expiry" placeholder="MM/YY" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-cvc">رمز CVV</label>
+                                <input type="text" id="card-cvc" placeholder="123" disabled>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#paymentConfirmationModal">تأكيد الدفع</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal لتأكيد الدفع -->
+        <div class="modal fade" id="paymentConfirmationModal" tabindex="-1" aria-labelledby="paymentConfirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="paymentConfirmationModalLabel">تم الدفع بنجاح</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <p>شكرًا لدفعك! تم حجز المبلغ بنجاح وسيتم الاحتفاظ به حتى إتمام الخدمة.</p>
+                        <p>يمكنك متابعة الطلب من لوحة التحكم الخاصة بك.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="client-dashboard.html" class="btn btn-primary">العودة إلى لوحة التحكم</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- التذييل -->
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="الأسطى">
+                        <p>الأسطى - منصتك الموثوقة لتأجير الحرفيين المحترفين بسهولة وسرعة.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>روابط سريعة</h4>
+                        <a href="#">عن التطبيق</a>
+                        <a href="#">الشروط والأحكام</a>
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">اتصل بنا</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>للحرفيين</h4>
+                        <a href="#">كيفية التسجيل</a>
+                        <a href="#">نصائح للحرفيين</a>
+                        <a href="#">سياسة العمولة</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>اشترك في النشرة الإخبارية</h4>
+                        <form>
+                            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <button type="submit" class="btn-secondary">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2025 الأسطى. جميع الحقوق محفوظة
+                </div>
+            </div>
+        </footer>
+
+        <!-- إضافة ملفات JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/components.js"></script>
+    </body>
+</html>
